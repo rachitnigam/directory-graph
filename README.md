@@ -4,12 +4,23 @@ Well, then why are you here?<br>
 Ah, you wanted to see some `sed` wizardry, well, you have come to the right place.<br>
 
 ### What is this?
-This is a simple shell script that runs `find .` on the current directory and coverts the supplied paths to [Dot language](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29). The conversion is done as a series of replacements done by the `sed` command.<br>
+This is a simple shell script that runs `find .` on the current directory and coverts the supplied paths to [Dot language](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29). The conversion is done as a series of replacements done by the `sed` command.<br> 
 
 **The script will only work on Mac OSX and other FreeBSD distributions because of the `sed -E` parameter. To make it work on other unix distributions, simply change the `sed -E` to `sed -r`.**
 
 ### Installing and running the command
-You will need to install [graphviz](http://www.graphviz.org) to see the graph. Once you have that installed, run the command by typing `sh dir_tree.sh [filename].dot`. You can name the file anything, but the file extension needs to be `.dot`. Once the command has stopped running, open the file using graphviz. <br>
+You will need to install [graphviz](http://www.graphviz.org) to see the graph. Once you have that installed, place the script in the directory whose graph you want. Now run the command by typing the following the directory you want to :
+```
+  sh dir_tree.sh [filename].dot
+``` 
+You can name the file anything, but the file extension needs to be `.dot`. Once the command has stopped running, open the file using graphviz. <br>
+
+If you get you get an error saying that you don't have execution permissions, run this command :
+```
+  chmod +x dir_tree.sh
+```
+The command grants execution permissions to all the users. Once you have the access, try running the command again.<br>
+
 *Sanity note : Please don't run this command on a root directory with lots of children directory. The command will terminate, but the `graphviz` might not be able to process the generated structure.*
 
 ### How does it work?
