@@ -1,7 +1,4 @@
 ## Directory graph generation
-Ever wanted a nice looking graph of your directory? No?<br>
-Well, then why are you here?<br>
-Ah, you wanted to see some `sed` wizardry, well, you have come to the right place.<br>
 
 ### What is this?
 This is a simple shell script that runs `find .` on the current directory and coverts the supplied paths to [Dot language](https://en.wikipedia.org/wiki/DOT_%28graph_description_language%29). The conversion is done as a series of replacements done by the `sed` command.<br> 
@@ -23,7 +20,7 @@ If you get you get an error saying that you don't have execution permissions, ru
 ```
 The command grants execution permissions to all the users. Once you have the access, try running the command again.<br>
 
-*Sanity note : Please don't run this command on a root directory with lots of children directory. The command will terminate, but the `graphviz` might not be able to process the generated structure.*
+*Sanity note : Please don't run this command on a root directory with lots of children directory. The command will terminate, but `graphviz` might not be able to process the generated structure.*
 
 ### How does it work?
 Let's walk through the `sed` replacements in the script. 
