@@ -12,10 +12,10 @@ You will need to install [graphviz](http://www.graphviz.org) to see the graph. O
 ```
   sh dir_tree.sh [filename].dot
 ``` 
-You can name the file anything, but the file extension needs to be `.dot`. Once the command has stopped running, open the file using graphviz. <br>
+You can name the file anything, but the file extension needs to be `.dot`. Once the command has stopped running, open the file using `graphviz`. <br>
 
 If you get you get an error saying that you don't have execution permissions, run this command :
-```
+```bash
   chmod +x dir_tree.sh
 ```
 The command grants execution permissions to all the users. Once you have the access, try running the command again.<br>
